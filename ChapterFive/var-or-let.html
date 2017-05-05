@@ -1,0 +1,41 @@
+
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+<meta charset="utf-8" />
+<title>Var or Let</title>
+<meta name="description" content="Var or Let. Version 1.0" />
+<meta name="author" content="The Gamer's Guide to Coding" />
+<meta name="dcterms.rights" content="https://creativecommons.org/licenses/by-sa/4.0/" />
+</head>
+
+<body>
+
+  <p>Open the console window to see the result of the script.</p>
+
+  <script>
+
+    // The following attempt to reference variables before they are defined
+    //console.log (dog);    // uncomment to show 'undefined' result
+    //console.log (cat);    // uncomment to show error
+
+    var dog = "dalmation";
+    let cat = "maine coon";
+
+    // Using var for global/function-level scope
+    for (var i = 0; i < 5; i++) {
+      console.log ("Number: %s", i);
+    }
+    console.log ("Last number: %s", i);   // Prints 5
+
+    // Using let for block-level scope
+    for (let j = 0; j < 5; j++) {
+      console.log ("Number: %s", j);
+    }
+    console.log ("Last number: %s", j);   // Results in error
+
+  </script>
+
+</body>
+</html>

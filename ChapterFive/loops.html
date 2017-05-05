@@ -1,0 +1,52 @@
+
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+<meta charset="utf-8" />
+<title>Loops</title>
+<meta name="description" content="Loops. Version 1.0" />
+<meta name="author" content="The Gamer's Guide to Coding" />
+<meta name="dcterms.rights" content="https://creativecommons.org/licenses/by-sa/4.0/" />
+</head>
+
+<body>
+
+  Open the console window to see the result of the script.
+
+  <p>Some text goes here.</p>
+  <p>More text goes here.</p>
+  <p>And even more text goes here.</p>
+
+  <script>
+
+    console.log ("Count by 1s:");
+    for (var i = 0; i < 5; i++) {
+      console.log ("Number is: " + i);
+    }
+    console.log ("");
+
+    console.log ("Count by 5s:");
+    for (var i = 0; i < 25; i += 5) {
+      console.log ("Number is: " + i);
+    }
+    console.log ("");
+
+    console.log ("Get content of P elements:");
+    var paras = document.getElementsByTagName("p");
+    for (var i = 0; i < paras.length; i++) {
+      console.log (paras[i].innerHTML);
+    }
+    console.log ("");
+
+    console.log ("Now making the P elements disappear:");
+    var paras = document.getElementsByTagName("p");
+    for (var i = 0; i < paras.length; i++) {
+      paras[i].style.visibility = "hidden";
+    }
+
+
+  </script>
+
+</body>
+</html>

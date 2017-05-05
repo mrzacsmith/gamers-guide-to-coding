@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>JavaScript Practice</title>
+	<style>
+		div {
+			background-color: red;
+			width: 300px;
+			height: 200px;
+		}
+	</style>
+</head>
+<body>
+	This has no element tag, name or class. Therefore,
+	it will show up!
+	<h2>Replace if all goes well</h2>
+
+	<div>
+		<p>Hopefully this will hide!</p>
+	</div>
+	<script>
+		console.log("First for loop in console:");
+		for (var i = 0; i < 9; i++) {
+			console.log("#: " + i);
+		}
+		console.log("");
+
+		console.log("Square numbers 1 - 10:");
+		for (var i = 1; i < 11; i++) {
+			console.log("#: " + i * i);
+		}
+		console.log("");
+
+		console.log("Make h2 disappear:");
+		var stuff = document.getElementsByTagName("h2");
+		for (var i = 0; i < stuff.length; i++) {
+			stuff[i].style.visibility = "hidden";
+		}
+
+		console.log("Make div disappear:");
+		var junk = document.getElementsByTagName("div");
+		for (var i = 0; i < junk.length; i++) {
+			junk[i].style.visibility = "hidden";
+		}
+		console.log("");
+
+
+	</script>
+
+</body>
+</html>
