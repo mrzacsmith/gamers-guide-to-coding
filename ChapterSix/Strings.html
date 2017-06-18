@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Strings</title>
+</head>
+<body>
+  <script>
+    var myString = "This is some more characters using a variable";
+    var stringA = "We are at: ";
+    var stringB = " Eating at McDonalds!";
+    var long = "four score and " +
+                "seven years ago we " +
+                "got tired of memorizing this long ass play!"
+
+    console.log("This is a string of characters!".toUpperCase());
+    console.log("This is a string of characters!".length);
+    console.log(myString.length);
+    console.log(myString.toUpperCase());
+    console.log(myString.toLowerCase());
+    console.log(stringA + stringB);
+    console.log(long.length);
+    console.log(long.substr(0, 7));
+    console.log(long.indexOf("a"));
+
+    var objString = new String("This is a string object!");
+    console.log(objString);
+
+  </script>
+</body>
+</html>

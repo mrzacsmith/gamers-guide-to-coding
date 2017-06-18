@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Events</title>
+  <style>
+    h2:hover {
+      background-color: blue;
+    }
+    img {
+      width: 200px;
+      height: auto;
+    }
+    img:hover {
+      opacity: .5;
+    }
+  </style>
+</head>
+<body>
+  <img src="RangerCreed.jpg" alt="Ranger Creed" onclick="tapped();">
+  <h2 onclick="h2Click();">Ranger Creed was here</h2>
+  <h2 onmouseover="this.value='They always have!'">Rangers Lead the Way!</h2>
+  <input type="button" value="Click me" onclick="this.value='You did it'; this.style.backgroundColor='red'" />
+  <input type="button" value="Roll over me" onmouseover="mouseMove(event);"/>
+  <input type="button" value="Click me" onclick="mouseClick(event);" />
+  <input type="button" value="Me too" onclick="mouseClick(event);" />
+  <input type="button" value="And me!" onclick="mouseClick(event);" />
+
+  <script>
+    function tapped() {
+      console.log("The Ranger Creed element was tapped!");
+    }
+    function h2Click() {
+      console.log("The h2 element was clicked!");
+    }
+    function mouseMove(event) {
+      console.log(event.x + ", " + event.y);
+    }
+    function mouseClick(event) {
+      console.log(target);
+    }
+  </script>
+</body>
+</html>
