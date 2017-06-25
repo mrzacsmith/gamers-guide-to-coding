@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    h2:hover {
+      background-color: blue;
+    }
+    div {
+      width: 400px;
+      background-color: gray;
+    }
+  </style>
+</head>
+<body>
+
+  <div>
+    <h2>Practicing Javascript Controls</h2>
+    <input type="button" value="click me" onclick="this.value='Damn yeah!'">
+    <input type="button" value="Clich and change" onclick="this.value='Words have changed'; this.style.backgroundColor='red'">
+    <br />
+    <input type="button" value="Use function" onclick="functionClick(this);">
+    <input type="button" value="2nd using function" onclick="functionClick2(this)">
+    <br />
+    <input type="button" value="See console" onclick="console.log(this);" />
+    <input type="button" value="See console again" onclick="console.log(this.style);" />
+    <input type="button" value="Check it again" onclick="consoleFunction(this);">
+    <br />
+    <!-- <input type="button" value="change h2" onclick="h2ChangeFunction(this);"> -->
+    <input type="button" value="Click" onmouseover="this.value='Using mouseover'" onmouseleave="this.value='Click me'">
+    <input type="text" value="Mouse out" onmouseout="this.value='Mouse has left the building'">
+    <input type="text" value="Mouse down" onmousedown="this.style.backgroundColor='green'">
+    <input type="text" value="Mouse up" onmouseup="this.style.backgroundColor='red'">
+    <br />
+    <input type="button" value="On Mouse Move" onmousemove="mouseMove(event);">
+    <input type="button" value="On Mouse Over" onmouseover="mouseMove(event);">
+    <br />
+    <input type="button" value="Click on me" onclick="mouseClick(event);">
+    <input type="button" value="On me too" onclick="mouseClick(event);">
+    <input type="button" value="Me too!" onclick="mouseClick(event);">
+  </div>
+  <div>
+    <p>Open the browser console window to see the result!</p>
+    <img src="RangerCreed.jpg" alt="Ranger Creed">
+    <div id="yellow" style="left:15px;background-color=yellow;" onclick="divClick(this);"> hello</div>
+    <div id="red" style="left:145px;background-color=red" onclick="divClick(this);"> hello</div>
+    <div id="green" style="left:275px;background-color=green;" onclick="divClick(this);"> hello</div>
+    <p id="text">Click the Ranger Creed</p>
+  </div>
+
+<script>
+  function divClick(div) {
+    if (div.id == 'red') {
+      console.log("Correct choice!");
+    } else {
+      console.log("That is not red!");
+    }
+  }
+  function mouseClick(e) {
+    console.log(event.target.value);
+    event.target.style.visibility = "hidden";
+  }
+  function mouseMove(e) {
+    console.log(e.x + "," + e.y);
+  }
+
+  function functionClick(button) {
+    button.value = "You used a function to change it!";
+    button.style.backgroundColor = 'blue';
+  }
+  function functionClick2(house) {
+    house.value = "Yippie";
+    house.style.backgroundColor= "green";
+  }
+  function consoleFunction(fish) {
+    console.log(this);
+    fish.value = "Fishy?";
+    fish.style.backgroundColor="yellow";
+  }
+  // function h2ChangeFunction(happy) {
+  //   happy.
+  // }
+</script>
+</body>
+</html>
