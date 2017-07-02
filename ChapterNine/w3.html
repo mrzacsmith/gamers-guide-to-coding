@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <button type="button" onclick="document.getElementById('time').innerHTML = Date();">Get the current date and time!</button>
+  <p id="time"></p>
+  <h2 id="change">Javascript can change h2 content!</h2>
+  <button type="button" onclick="document.getElementById('change').innerHTML = 'Change is on my mind!'">Change h2</button>
+  <h2 id="firstScript"></h2>
+  <h2 id="add"></h2>
+  <button type="button" onclick="addFunction(6,2);">Add 6 + 2</button>
+
+
+  <script>
+    document.getElementById('firstScript').innerHTML = "Using a script too fill an H2";
+
+    function addFunction(a,b) {
+      document.getElementById('add').innerHTML = a + b;
+    }
+  </script>
+</body>
+</html>

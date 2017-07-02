@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Chapter Nine Graphics</title>
+  <style>
+    div {
+      width: 500px;
+      margin: 0 auto;
+    }
+    p {
+      position: absolute;
+      width: 500px;
+      text-align: center;
+      font-family: "Arial Black", Gadget, sans-serif;
+      font-size: 1.5em;
+      color: yellow;
+    }
+    #name {
+      top: 200px;
+    }
+    #what {
+      top: 270px;
+      font-size: 1.3em;
+    }
+    #time, #location, #thoughts {
+      color: black;
+      font-size: 1em;
+    }
+  </style>
+</head>
+<body>
+
+  <div>
+    <img src="./assets/RangerCreed.jpg" alt="" onmousedown="locationFunctionImage(event);">
+    <p id="name">Rangerus Amongus</p>
+    <p id="what">The uncommon man!</p>
+    <input type="button" value="Click Location" onclick="locationFunction(event);">
+    <input type="button" onclick="document.getElementById('time').innerHTML = Date();" value="Click to get the time">
+    <p id="time"></p>
+    <p id="location"></p><br>
+    <p id="thoughts"></p>
+  </div>
+
+</body>
+<script>
+  function locationFunction(e) {
+    console.log(e.x + ", " + e.y);
+  }
+  function locationFunctionImage(e) {
+    console.log(e.x + ", " + e.y);
+    // var locX = e.x;
+    // var locY = e.y;
+    var loc = document.getElementById('name').innerHTML = e.x + ", " + e.y;
+    // if (locX > 800) {
+    //   document.getElementById('thoughts').innerHTML = "Strong X";
+    // } else {
+    //
+    // }
+
+  }
+</script>
+</html>
